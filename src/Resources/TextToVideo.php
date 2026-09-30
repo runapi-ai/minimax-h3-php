@@ -10,7 +10,6 @@ use RunApi\Core\RequestOptions;
 use RunApi\Core\Resources\TypedConfiguredResource;
 use RunApi\MinimaxH3\Models\CompletedVideoTaskResponse;
 use RunApi\MinimaxH3\Models\VideoTaskResponse;
-use RunApi\MinimaxH3\Types;
 
 /** Text to video operations for MiniMax H3. */
 readonly class TextToVideo extends TypedConfiguredResource
@@ -73,10 +72,8 @@ readonly class TextToVideo extends TypedConfiguredResource
         return new self(
             $http,
             '/api/v1/minimax_h3/text_to_video',
-            'minimax-h3/text-to-video',
             VideoTaskResponse::class,
             CompletedVideoTaskResponse::class,
-            Types::TEXT_TO_VIDEO_MODELS,
             'text-to-video',
             VideoTaskResponse::class,
             CompletedVideoTaskResponse::class,

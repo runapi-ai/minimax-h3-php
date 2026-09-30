@@ -45,9 +45,9 @@ $task = $client->textToVideo->create([
     'duration_seconds' => 4,
     'output_resolution' => '768p',
     'prompt' => 'A precise product render on white marble',
-    'reference_audio_urls' => ['https://cdn.runapi.ai/public/samples/voice.mp3'],
+    'reference_audio_urls' => ['sample'],
     'reference_image_urls' => ['https://cdn.runapi.ai/public/samples/image.jpg'],
-    'reference_video_urls' => ['https://cdn.runapi.ai/public/samples/video.mp4'],
+    'reference_video_urls' => ['sample'],
 ]);
 
 $status = $client->textToVideo->get($task->id);
@@ -58,9 +58,9 @@ $result = $client->textToVideo->run([
     'duration_seconds' => 4,
     'output_resolution' => '768p',
     'prompt' => 'A serene mountain lake at dawn',
-    'reference_audio_urls' => ['https://cdn.runapi.ai/public/samples/voice.mp3'],
+    'reference_audio_urls' => ['sample'],
     'reference_image_urls' => ['https://cdn.runapi.ai/public/samples/image.jpg'],
-    'reference_video_urls' => ['https://cdn.runapi.ai/public/samples/video.mp4'],
+    'reference_video_urls' => ['sample'],
 ]);
 
 echo $result->videos[0]->url . PHP_EOL;

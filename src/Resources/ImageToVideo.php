@@ -10,7 +10,6 @@ use RunApi\Core\RequestOptions;
 use RunApi\Core\Resources\TypedConfiguredResource;
 use RunApi\MinimaxH3\Models\CompletedVideoTaskResponse;
 use RunApi\MinimaxH3\Models\VideoTaskResponse;
-use RunApi\MinimaxH3\Types;
 
 /** Image to video operations for MiniMax H3. */
 readonly class ImageToVideo extends TypedConfiguredResource
@@ -69,10 +68,8 @@ readonly class ImageToVideo extends TypedConfiguredResource
         return new self(
             $http,
             '/api/v1/minimax_h3/image_to_video',
-            'minimax-h3/image-to-video',
             VideoTaskResponse::class,
             CompletedVideoTaskResponse::class,
-            Types::IMAGE_TO_VIDEO_MODELS,
             'image-to-video',
             VideoTaskResponse::class,
             CompletedVideoTaskResponse::class,
